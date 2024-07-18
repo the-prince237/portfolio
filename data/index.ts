@@ -69,6 +69,61 @@ export const gridItems = [
   },
 ];
 
+export  const stack = [
+    {
+      icon: "re",
+      title: "React JS"
+    }, 
+    {
+      icon: "next",
+      title: "Next JS"
+    },
+    {
+      icon: "nestjs",
+      title: "Nest JS"
+    },
+    {
+      icon: "tail",
+      title: "Tailwind CSS"
+    },
+    {
+      icon: "fm",
+      title: "Framer Motion"
+    },
+    {
+      icon: "ts",
+      title: "Typescript"
+    },
+    {
+      icon: "gql",
+      title: "Apollo GraphQL"
+    },
+    {
+      icon: "kafka",
+      title: "Kafka"
+    },
+    {
+      icon: "as",
+      title: "Android Studio"
+    },
+    {
+      icon: "firebase",
+      title: "Firebase"
+    },
+    {
+      icon: "mdb",
+      title: "Mongo DB"
+    },
+    {
+      icon: "pgs",
+      title: "PostgresQL"
+    },
+    {
+      icon: "docker",
+      title: "Docker"
+    }
+  ]
+
 export const projects = [
   {
     id: 1,

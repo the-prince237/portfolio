@@ -2,16 +2,11 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { projects } from "@/data";
+import { projects, stack } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import Link from "next/link";
 
 const RecentProjects = () => {
-
-  const iconLists = ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/fm.svg"]
-
-
-
   return (
     <div className="py-20">
       <h1 className="heading">
@@ -19,16 +14,14 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="w-full flex justify-center my-10">
-      <div className="flex m-auto items-center">
-        {iconLists.map((icon, index) => (
+      <div className="flex m-auto items-center flex-wrap gap-3 justify-center">
+        {stack.map(({ icon, title }, index) => (
           <div
+            title={title}
             key={index}
-            className="border border-white/[.2] rounded-full bg-black lg:w-15 lg:h-15 w-10 h-10 flex justify-center items-center"
-            style={{
-              transform: `translateX(-${5 * index + 20}px)`,
-            }}
+            className="border cursor-pointer border-white/[.2] rounded-full bg-black lg:w-15 lg:h-15 w-10 h-10 flex justify-center items-center"
           >
-            <img src={icon} alt="icon5" className="p-2" />
+            <img src={`/${icon}.svg`} alt="icon5" className="p-2" />
           </div>
         ))}
       </div>

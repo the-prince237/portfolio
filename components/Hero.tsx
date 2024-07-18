@@ -5,6 +5,8 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Link from "next/link";
 import { socialMedia } from "@/data";
+import { MovingBorder } from "./ui/MovingBorders";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -44,18 +46,21 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <Link
-              href={info.link}
-              target="_blank"
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </Link>
-          ))}
-        </div>
+          <div className="flex flex-col gap-6 md:gap-3 justify-center items-center">
+            <div className="flex items-center md:gap-3 gap-6">
+              {socialMedia.map((info) => (
+                <Link
+                  href={info.link}
+                  target="_blank"
+                  key={info.id}
+                  className="w-20 h-20 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                >
+                  <img src={info.img} alt="icons" width={20} height={20} />
+                </Link>
+              ))}
+            </div>
+            <img src="/me.png" className="rounded-full object-cover w-14 h-14 border-2 absolute border-black-300" />
+          </div>
           {/**
            *  Link: https://ui.aceternity.com/components/text-generate-effect
            *
