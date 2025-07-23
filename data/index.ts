@@ -137,7 +137,7 @@ export const projects = [
     title: "Hypercut Media Showcase",
     des: "Digital Marketing agency showcasing their work and services to clients.",
     img: "/p2.svg",
-    link: "https://hypercutmedia.pro",
+    link: "https://hypercut-media.vercel.app",
   },
   {
     id: 3,
